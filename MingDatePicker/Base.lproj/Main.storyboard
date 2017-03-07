@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fuK-g7-2KW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--日期选择器-->
+        <scene sceneID="aGE-VR-3OH">
+            <objects>
+                <tableViewController storyboardIdentifier="RootTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bxj-A9-0dQ" customClass="RootTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pdb-A4-gds">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="4Jb-7A-sB4">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="WwN-bj-p2n" style="IBUITableViewCellStyleDefault" id="wea-i9-884">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wea-i9-884" id="k3R-Jb-iw9">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="日期选择" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WwN-bj-p2n">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="bxj-A9-0dQ" id="io1-eO-WHf"/>
+                            <outlet property="delegate" destination="bxj-A9-0dQ" id="9Dc-He-7vB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="日期选择器" id="Kus-CH-qom"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="WwN-bj-p2n" id="tn7-np-vbD"/>
+                        <segue destination="dYj-f5-CgT" kind="presentation" identifier="ShowDatePickerSegue" id="vXV-qm-68S"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6e-wM-y9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="-9"/>
+        </scene>
+        <!--MingDatePicker-->
+        <scene sceneID="G01-x5-KVI">
+            <objects>
+                <navigationController title="MingDatePicker" id="fuK-g7-2KW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P99-g8-wNE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bxj-A9-0dQ" kind="relationship" relationship="rootViewController" id="PyM-Bi-uKY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlK-Fv-qrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1174" y="-9"/>
+        </scene>
+        <!--日期选择（年月日）-->
+        <scene sceneID="2Vz-v6-umo">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerViewController" title="日期选择（年月日）" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dYj-f5-CgT" customClass="DatePickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qQv-aC-OeN"/>
+                        <viewControllerLayoutGuide type="bottom" id="jVH-H1-N4A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xj3-a4-Ofo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGX-yg-uaG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eSF-xP-UgV">
+                                        <rect key="frame" x="0.0" y="42" width="375" height="216"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="509961902.92437202">
+                                            <!--2017-02-28 08:05:02 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择有效期日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kv-7R-SCb">
+                                        <rect key="frame" x="141" y="16" width="93" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fw-Bz-ZLf">
+                                        <rect key="frame" x="1" y="259" width="186" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" red="0.98431372549999996" green="0.1647058824" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelClick:" destination="dYj-f5-CgT" eventType="touchUpInside" id="kyJ-hj-C77"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGa-Wt-F7c">
+                                        <rect key="frame" x="188" y="259" width="186" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="确定"/>
+                                        <connections>
+                                            <action selector="commitClick:" destination="dYj-f5-CgT" eventType="touchUpInside" id="FSn-lv-l6k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4Fw-Bz-ZLf" firstAttribute="width" secondItem="ZGa-Wt-F7c" secondAttribute="width" id="0gb-28-tx2"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZGa-Wt-F7c" secondAttribute="bottom" constant="1" id="6Wb-MM-6F0"/>
+                                    <constraint firstAttribute="trailing" secondItem="eSF-xP-UgV" secondAttribute="trailing" id="6bY-uX-Hbg"/>
+                                    <constraint firstItem="8kv-7R-SCb" firstAttribute="centerX" secondItem="fGX-yg-uaG" secondAttribute="centerX" id="7ii-bs-J1m"/>
+                                    <constraint firstAttribute="height" constant="300" id="8l0-c7-c4m"/>
+                                    <constraint firstItem="eSF-xP-UgV" firstAttribute="leading" secondItem="fGX-yg-uaG" secondAttribute="leading" id="9BJ-ps-aSK"/>
+                                    <constraint firstItem="eSF-xP-UgV" firstAttribute="top" secondItem="8kv-7R-SCb" secondAttribute="bottom" constant="10" id="HHR-RN-Q3K"/>
+                                    <constraint firstItem="ZGa-Wt-F7c" firstAttribute="top" secondItem="eSF-xP-UgV" secondAttribute="bottom" constant="1" id="Hzt-WV-0eG"/>
+                                    <constraint firstItem="eSF-xP-UgV" firstAttribute="centerX" secondItem="fGX-yg-uaG" secondAttribute="centerX" id="Ini-bj-tSp"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZGa-Wt-F7c" secondAttribute="trailing" constant="1" id="Sc8-h8-vz6"/>
+                                    <constraint firstItem="4Fw-Bz-ZLf" firstAttribute="top" secondItem="eSF-xP-UgV" secondAttribute="bottom" constant="1" id="XRQ-fE-fsJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Fw-Bz-ZLf" secondAttribute="bottom" constant="1" id="cSK-bX-MQi"/>
+                                    <constraint firstItem="ZGa-Wt-F7c" firstAttribute="leading" secondItem="4Fw-Bz-ZLf" secondAttribute="trailing" constant="1" id="cYi-Fm-P8D"/>
+                                    <constraint firstItem="eSF-xP-UgV" firstAttribute="centerY" secondItem="fGX-yg-uaG" secondAttribute="centerY" id="dtj-V1-Zwf"/>
+                                    <constraint firstItem="4Fw-Bz-ZLf" firstAttribute="leading" secondItem="fGX-yg-uaG" secondAttribute="leading" constant="1" id="kDv-qA-xP8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fGX-yg-uaG" secondAttribute="trailing" id="bAf-nG-KH2"/>
+                            <constraint firstItem="fGX-yg-uaG" firstAttribute="leading" secondItem="xj3-a4-Ofo" secondAttribute="leading" id="cMf-1c-TKx"/>
+                            <constraint firstItem="jVH-H1-N4A" firstAttribute="top" secondItem="fGX-yg-uaG" secondAttribute="bottom" id="nRD-hb-Goq"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="300"/>
+                    <connections>
+                        <outlet property="datePickerView" destination="eSF-xP-UgV" id="r1G-vx-Zxe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3Q-5M-JPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="-175"/>
+        </scene>
+    </scenes>
+</document>
