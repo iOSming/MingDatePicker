@@ -16,6 +16,7 @@
 		3A98E6941E6E58C300B38B40 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98E6931E6E58C300B38B40 /* DatePickerViewController.m */; };
 		3A98E69A1E6E599100B38B40 /* DismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98E6971E6E599100B38B40 /* DismissTransition.m */; };
 		3A98E69B1E6E599100B38B40 /* PresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98E6991E6E599100B38B40 /* PresentTransition.m */; };
+		3A98E69E1E6E8ED000B38B40 /* SimulatorScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A98E69D1E6E8ED000B38B40 /* SimulatorScreenShot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		3A98E6971E6E599100B38B40 /* DismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissTransition.m; sourceTree = "<group>"; };
 		3A98E6981E6E599100B38B40 /* PresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentTransition.h; sourceTree = "<group>"; };
 		3A98E6991E6E599100B38B40 /* PresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentTransition.m; sourceTree = "<group>"; };
+		3A98E69D1E6E8ED000B38B40 /* SimulatorScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SimulatorScreenShot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		3A98E6741E6E573F00B38B40 /* MingDatePicker */ = {
 			isa = PBXGroup;
 			children = (
+				3A98E69C1E6E8ED000B38B40 /* screenshot */,
 				3A98E6951E6E599100B38B40 /* AnimatedCustom */,
 				3A98E6781E6E573F00B38B40 /* AppDelegate.h */,
 				3A98E6791E6E573F00B38B40 /* AppDelegate.m */,
@@ -100,6 +103,14 @@
 				3A98E6991E6E599100B38B40 /* PresentTransition.m */,
 			);
 			path = AnimatedCustom;
+			sourceTree = "<group>";
+		};
+		3A98E69C1E6E8ED000B38B40 /* screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				3A98E69D1E6E8ED000B38B40 /* SimulatorScreenShot.png */,
+			);
+			path = screenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A98E69E1E6E8ED000B38B40 /* SimulatorScreenShot.png in Resources */,
 				3A98E6851E6E573F00B38B40 /* LaunchScreen.storyboard in Resources */,
 				3A98E6821E6E573F00B38B40 /* Assets.xcassets in Resources */,
 				3A98E6801E6E573F00B38B40 /* Main.storyboard in Resources */,
@@ -333,6 +345,7 @@
 				3A98E68B1E6E573F00B38B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
